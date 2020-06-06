@@ -1,10 +1,11 @@
 @extends('app')
 
 @section('body')
-    <div>
-        @if(isset($success))
-            <div class="alert alert-success" role="alert">
-                {{$success}}
+    <div class="py-2">
+        @if(session('success'))
+            <div class="alert alert-success alert-dismissible">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                {{ session('success') }}
             </div>
         @endif
 
